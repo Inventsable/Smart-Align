@@ -1,0 +1,15 @@
+<svg id="selection" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+  <title>selection</title>
+  <g>
+    <polygon points="43 43 36 43 36 41 41 41 41 36 43 36 43 43" style="fill: #a1a1a1"/>
+    <rect x="20" y="41" width="8" height="2" style="fill: #a1a1a1"/>
+    <polygon points="12 43 5 43 5 36 7 36 7 41 12 41 12 43" style="fill: #a1a1a1"/>
+    <rect x="5" y="20" width="2" height="8" style="fill: #a1a1a1"/>
+    <polygon points="7 12 5 12 5 5 12 5 12 7 7 7 7 12" style="fill: #a1a1a1"/>
+    <rect x="20" y="5" width="8" height="2" style="fill: #a1a1a1"/>
+    <polygon points="43 12 41 12 41 7 36 7 36 5 43 5 43 12" style="fill: #a1a1a1"/>
+    <rect x="41" y="20" width="2" height="8" style="fill: #a1a1a1"/>
+  </g>
+  <polygon points="18.5 35 24.5 29 33.5 29 18.5 13 18.5 35" style="fill: #a1a1a1"/>
+  <rect width="48" height="48" style="fill: none"/>
+</svg>

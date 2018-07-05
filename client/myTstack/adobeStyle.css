@@ -17,7 +17,7 @@ html {
   --inputWidthLG: 4rem;
   --inputWidth1X: 100%;
 
-  /* --btnPadding: .0625rem .5rem; */
+  /* --btnPadding: .0625rem 1vw; */
   --btnPadding: 0rem 0rem;
   --btnMargin: auto .035rem;
   --btnHeight: 1.75rem;
@@ -68,7 +68,7 @@ body {
 
 .adobe-btn, .adobe-btn-switch, .adobe-btn-switch-off, .adobe-btn-switch-on, .adobe-btn-hover, .adobe-btn-active {
   padding: var(--btnPadding);
-  min-width: var(--btnWidth);
+  max-width: var(--btnWidth);
   /* width: 25%; */
   height: var(--btnHeight);
   max-height: var(--btnHeightMax);
@@ -77,6 +77,20 @@ body {
   margin: var(--btnMargin);
   user-select: none;
   cursor: pointer;
+  font-size: 1.8rem;
+}
+
+.adobe-btn-trans {
+padding: var(--btnPadding);
+max-width: var(--btnWidth);
+height: var(--btnHeight);
+max-height: var(--btnHeightMax);
+border-width: var(--globalBorderWidth);
+border-style: solid;
+margin: var(--btnMargin);
+user-select: none;
+cursor: default;
+font-size: 1.8rem;
 }
 
 

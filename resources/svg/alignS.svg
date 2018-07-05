@@ -1,0 +1,9 @@
+<svg id="alignS" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+  <title>alignS</title>
+  <g>
+    <rect x="24" y="22" width="18" height="12" transform="translate(5 61) rotate(-90)" style="fill: #a1a1a1"/>
+    <rect y="17" width="30" height="10" transform="translate(-7 37) rotate(-90)" style="fill: #a1a1a1"/>
+    <rect x="23" y="19" width="2" height="42" transform="translate(-16 64) rotate(-90)" style="fill: #a1a1a1"/>
+  </g>
+  <rect width="48" height="48" style="fill: none"/>
+</svg>

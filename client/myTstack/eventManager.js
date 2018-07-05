@@ -3,6 +3,8 @@
 
   var csInterface = new CSInterface();
 
+
+
   csInterface.addEventListener('com.init', function(evt) {
     console.log("Initializing console");
   });

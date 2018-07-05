@@ -1,10 +1,34 @@
 var pathTo = {
   sand: "none"
+  res: "none"
 };
+
+
+// var set = 'MySet';
+// // Location of your saved Actions.aia file
+// var aia =File('~/Desktop/MySet.aia');//
+// //
+// try{
+// app.unloadAction(set,'');
+// }catch(e){}
+
+function bootActions(path) {
+  try {
+    app.loadAction(path);
+  } catch(e){alert(e);}
+}
 
 function logData(sandPath){
   pathTo.sand = sandPath;
   // alert(pathTo.sand)
+}
+
+function selectScanner() {
+  if (app.selection.length > 1) {
+    return 1;
+  } else {
+    return 0;
+  }
 }
 
 var err = {
