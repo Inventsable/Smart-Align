@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionList>
+    <Extension Id="com.smart.align.panel">
+        <HostList>
+            <Host Name="ILST" Port="4000"/>
+            <Host Name="AEFT" Port="4001"/>
+            <Host Name="PHXS" Port="4002"/>
+        </HostList>
+    </Extension>
+</ExtensionList>

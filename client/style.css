@@ -1,0 +1,32 @@
+#content {
+  margin: 1rem 0px;
+}
+
+.adobe-btn-sp {
+  margin: 0px;
+}
+
+
+
+.adobe-toolbar-sp {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0px;
+  align-items: center;
+}
+
+.adobe-btn-sp {
+  max-width: 28%;
+  font-size: 2rem;
+  font-size: 28vw;
+  /* display: inline-block; */
+  display: flex;
+  padding: 0px;
+  margin: 0px;
+  /* border-width: var(--globalBorderWidth); */
+  border-style: solid;
+  user-select: none;
+  cursor: pointer;
+  color: var(--colorFont);
+}
