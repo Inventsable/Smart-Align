@@ -13,6 +13,7 @@ var pathTo = {
 // }catch(e){}
 
 function bootActions(path) {
+  alert(path)
   try {
     app.loadAction(path);
   } catch(e){alert(e);}

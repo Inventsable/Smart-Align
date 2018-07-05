@@ -3,13 +3,12 @@
 
   var csInterface = new CSInterface();
 
-
-
   csInterface.addEventListener('com.init', function(evt) {
     console.log("Initializing console");
   });
 
   dispatchEvent("com.plug", "Plugged In")
+
   function dispatchEvent(name, data) {
   	var event = new CSEvent(name, 'APPLICATION');
   	event.data = data;

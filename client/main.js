@@ -12,6 +12,7 @@ var distBtn = document.getElementById('dist');
 
 loadUniversalJSXLibraries();
 console.log(`Loading for ${appName}`);
+loadJSX(`align.jsx`);
 loadJSX(`${appName}.jsx`);
 console.log(appUI);
 scanningToggle("On")
@@ -20,7 +21,7 @@ var toggle = {
   direction: "align"
 };
 
-// csInterface.evalScript(`bootActions('${actionPath}')`)
+csInterface.evalScript(`bootActions('${actionPath}')`)
 
 function scanningToggle(params) {
 	if (params === "On") {
