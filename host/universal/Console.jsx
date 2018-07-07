@@ -1,35 +1,16 @@
-var pathTo = {
-  sand: "none"
-  res: "none"
-};
-
-
-// var set = 'MySet';
-// // Location of your saved Actions.aia file
-// var aia =File('~/Desktop/MySet.aia');//
-// //
-// try{
-// app.unloadAction(set,'');
-// }catch(e){}
-
-function bootActions(path) {
-  alert(path)
-  try {
-    app.loadAction(path);
-  } catch(e){alert(e);}
-}
-
-function logData(sandPath){
-  pathTo.sand = sandPath;
-  // alert(pathTo.sand)
-}
-
 function selectScanner() {
   if (app.selection.length > 1) {
+    return app.selection.length;
+  } else if (app.selection.length >= 1) {
     return 1;
   } else {
     return 0;
   }
+}
+
+
+function sendMsg(){
+  alert("Hello?")
 }
 
 var err = {
@@ -75,6 +56,10 @@ function JSXEvent(payload, eventType) {
   return;
 }
 
+
+
+
+
 // function triggerJSXFunction(isOn) {
 //   if (isOn) {
 //     // there's a returning value from JS
@@ -109,3 +94,28 @@ function hexToRgb(hex) {
         b: parseInt(result[3], 16)
     } : null;
 }
+
+// var pathTo = {
+//   sand: "none"
+//   res: "none"
+// };
+
+// var set = 'MySet';
+// // Location of your saved Actions.aia file
+// var aia =File('~/Desktop/MySet.aia');//
+// //
+// try{
+// app.unloadAction(set,'');
+// }catch(e){}
+
+// function bootActions(path) {
+//   alert(path)
+//   try {
+//     app.loadAction(path);
+//   } catch(e){alert(e);}
+// }
+
+// function logData(sandPath){
+//   pathTo.sand = sandPath;
+//   // alert(pathTo.sand)
+// }

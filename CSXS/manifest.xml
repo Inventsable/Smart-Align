@@ -45,11 +45,11 @@
               <Width>104</Width>
             </Size>
             <MaxSize>
-              <Height>280</Height>
+              <Height>200</Height>
               <Width>150</Width>
             </MaxSize>
             <MinSize>
-              <Height>280</Height>
+              <Height>200</Height>
               <Width>104</Width>
             </MinSize>
           </Geometry>

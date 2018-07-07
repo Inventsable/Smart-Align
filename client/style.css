@@ -1,6 +1,102 @@
+:root {
+  --quart: cubic-bezier(0.76, 0.00, 0.24, 1.00);
+}
+
 #content {
   margin: 1rem 0px;
 }
+
+svg {
+  width: 100%;
+}
+
+.icoFill {
+  fill: var(--colorIcon);
+}
+
+.bound {
+  fill: rgba(0,0,0,0.2);
+  transition: fill 100ms var(--quart) 20ms;
+}
+
+/* g:hover {
+  -webkit-filter: drop-shadow( -5px -5px 5px #000 );
+        filter: drop-shadow( -5px -5px 5px #000 );
+} */
+
+g:hover > .bound {
+  fill: var(--colorBorder);
+  /* -webkit-filter: drop-shadow(2rem 2rem 1rem rgba(0,0,0,0.5)); */
+}
+
+g:active > .icoFill {
+  fill: var(--colorPanelBG);
+}
+
+g:active > .icoStr {
+  stroke: var(--colorPanelBG);
+}
+
+g:active > .bound {
+  fill: var(--colorSelect);
+}
+
+.frameDashLine {
+  /* opacity: 0; */
+   fill: none;
+   stroke: var(--colorFocus);
+   stroke-miterlimit: 10;
+   stroke-dasharray: 7.664572715759277,7.664572715759277;
+   transition: stroke 100ms var(--quart) 20ms;
+}
+
+.icoStr {
+  fill: none;
+  stroke: var(--colorIcon);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.frameNode {
+   fill: #fff;
+   stroke: var(--colorFocus);
+   stroke-miterlimit: 10;
+   transition: stroke 100ms var(--quart) 20ms,
+                 fill 100ms var(--quart) 20ms;
+}
+
+
+#frameNodes {
+  opacity: 0;
+  transition: opacity 180ms var(--quart) 20ms;
+}
+
+#frameSolid {
+  opacity: 0;
+  transition: opacity 180ms var(--quart) 20ms;
+}
+
+#frameDash {
+  opacity: 0;
+  transition: opacity 180ms var(--quart) 20ms;
+}
+
+#frameS {
+  stroke: var(--colorFocus);
+  fill: none;
+}
+
+#bMovin {
+  /* position:relative; */
+  /* border: 2px solid red; */
+  height: auto;
+}
+
+
+
+/* #fillButton {
+  fill: #007bff;
+} */
 
 .adobe-btn {
   font-size: 1.5rem;
@@ -9,8 +105,6 @@
 .adobe-btn-sp {
   margin: 0px;
 }
-
-
 
 .adobe-toolbar-sp {
   display: flex;

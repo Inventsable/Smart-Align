@@ -13,7 +13,7 @@ function alignArtboardToSelection(){
   var aDoc = app.activeDocument;
   var Sel = aDoc.selection;
 
-  if (Sel.length >0 ) {
+  if (Sel.length > 0) {
     var abIdx = aDoc.artboards.getActiveArtboardIndex();
     var actAbBds = aDoc.artboards[abIdx].artboardRect;
 
@@ -39,7 +39,7 @@ function alignArtboardToSelection(){
   }
 }
 
-alignSelection();
+// alignSelection();
 
 /** @TenA
 https://forums.adobe.com/thread/2111711  **/
@@ -54,3 +54,72 @@ function alignSelection(){
     target.position = [ct - wd / 2, md + ht / 2];
   }
 }
+
+// alert(getBBox());
+
+getBoundingBox();
+
+function getTrueSizes(){
+  var x, y, w, h;
+  var group = [];
+  for (var i = 0; i < app.selection.length; i++) {
+    var trueRect = [];
+    var rect = []
+    var target = app.selection[i];
+    var bounds = target.geometricBounds;
+    for (var a = 0; a < bounds.length; a++) {
+      if (bounds[a] < 0)
+        bounds[a] = bounds[a]*(-1);
+      rect.push(bounds[a])
+    }
+    x = rect[0];
+    y = rect[1];
+    w = ((rect[0] - rect[2]) < 0) ? ((rect[0] - rect[2])*(-1)) : (rect[0] - rect[2])
+    h = ((rect[1] - rect[3]) < 0) ? ((rect[1] - rect[3])*(-1)) : (rect[1] - rect[3])
+    trueRect.push(x, y, w, h)
+    group.push(trueRect);
+  }
+  return group;
+}
+
+// alert(getBoundingBox())
+
+function getBoundingBox() {
+  var grp = getTrueSizes();
+  var width, height;
+  // iterate through objects to find numbers based on value and not selection order
+  width = (grp[0][0] - (grp[1][0] + grp[1][2]));
+  height = (grp[0][1] - (grp[1][1] + grp[1][3]));
+  width = (width < 0) ? width * (-1) : width;
+  height = (height < 0) ? height * (-1) : height;
+  return rect = [ grp[0][0], grp[0][1], width, height ];
+  // alert("w: " + width + ", h:" + height)
+}
+
+
+// alert(getBounds(selection, 'geometricBounds'))
+
+/** @Alexander Ladygin
+https://forums.adobe.com/thread/2109761  **/
+function getBounds(arr, bounds) {
+    var x = [], y = [], w = [], h = [],
+        bounds = bounds || 'geometricBounds';
+
+    for ( var i = 0; i < arr.length; i++ ) {
+        x.push(arr[i][bounds][0]);
+        y.push(arr[i][bounds][1]);
+        w.push(arr[i][bounds][2]);
+        h.push(arr[i][bounds][3]);
+    }
+
+    x = Math.min.apply(null, x);
+    y = Math.max.apply(null, y);
+    w = Math.max.apply(null, w);
+    h = Math.min.apply(null, h);
+    return rect = [ x, y, w, h ];
+};
+
+// var selectionXY = [ app.activeDocument.selection.bounds[0].as('px'),
+//     app.activeDocument.selection.bounds[1].as('px') ];
+
+// alert(selectionXY)

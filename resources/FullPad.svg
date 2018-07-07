@@ -1,0 +1,71 @@
+<svg id="padComponents" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 201 201">
+  <title>FullPad</title>
+  <g id="NW">
+    <rect x="16" y="16" width="30.83" height="30.83" rx="1.9" ry="1.9" style="fill: #1c1c1c"/>
+    <path d="M23.52,23.52l3,11.35a.64.64,0,0,0,.45.45.62.62,0,0,0,.61-.16l7.54-7.54a.62.62,0,0,0,.16-.61.64.64,0,0,0-.45-.45Z" transform="translate(0.5 0.5)" style="fill: #fff"/>
+  </g>
+  <g id="SE">
+    <rect x="154.16" y="154.17" width="30.83" height="30.83" rx="1.9" ry="1.9" style="fill: #1c1c1c"/>
+    <path d="M176.48,176.48l-11.35-3a.64.64,0,0,1-.45-.45.62.62,0,0,1,.16-.61l7.54-7.54a.62.62,0,0,1,.61-.16.64.64,0,0,1,.45.45Z" transform="translate(0.5 0.5)" style="fill: #fff"/>
+  </g>
+  <g id="SW">
+    <rect x="16" y="154.17" width="30.83" height="30.83" rx="1.9" ry="1.9" style="fill: #1c1c1c"/>
+    <path d="M23.52,176.48l11.35-3a.64.64,0,0,0,.45-.45.62.62,0,0,0-.16-.61l-7.54-7.54a.62.62,0,0,0-.61-.16.64.64,0,0,0-.45.45Z" transform="translate(0.5 0.5)" style="fill: #fff"/>
+  </g>
+  <g id="NE">
+    <rect x="154.16" y="16" width="30.83" height="30.83" rx="1.9" ry="1.9" style="fill: #1c1c1c"/>
+    <path d="M176.48,23.52l-3,11.35a.64.64,0,0,1-.45.45.62.62,0,0,1-.61-.16l-7.54-7.54a.62.62,0,0,1-.16-.61.64.64,0,0,1,.45-.45Z" transform="translate(0.5 0.5)" style="fill: #fff"/>
+  </g>
+  <g id="W">
+    <rect x="16" y="56.99" width="30.83" height="87.03" rx="2.78" ry="2.78" style="fill: #1c1c1c"/>
+    <path d="M21.27,100l10.18,5.88a.63.63,0,0,0,.94-.55V94.67a.63.63,0,0,0-.94-.55Z" transform="translate(0.5 0.5)" style="fill: #fff"/>
+    <line x1="21.77" y1="88.73" x2="21.77" y2="112.27" style="fill: none;stroke: #fff;stroke-linecap: round;stroke-linejoin: round"/>
+  </g>
+  <g id="E">
+    <rect x="154.17" y="56.99" width="30.83" height="87.03" rx="2.78" ry="2.78" style="fill: #1c1c1c"/>
+    <path d="M178.73,100l-10.18,5.88a.63.63,0,0,1-.94-.55V94.67a.63.63,0,0,1,.94-.55Z" transform="translate(0.5 0.5)" style="fill: #fff"/>
+    <line x1="179.23" y1="88.73" x2="179.23" y2="112.27" style="fill: none;stroke: #fff;stroke-linecap: round;stroke-linejoin: round"/>
+  </g>
+  <g id="S">
+    <rect x="56.99" y="154.17" width="87.03" height="30.83" rx="2.78" ry="2.78" style="fill: #1c1c1c"/>
+    <path d="M100,178.73l5.88-10.18a.63.63,0,0,0-.55-.94H94.67a.63.63,0,0,0-.55.94Z" transform="translate(0.5 0.5)" style="fill: #fff"/>
+    <line x1="88.73" y1="179.23" x2="112.27" y2="179.23" style="fill: none;stroke: #fff;stroke-linecap: round;stroke-linejoin: round"/>
+  </g>
+  <g id="N">
+    <rect x="56.99" y="16" width="87.03" height="30.83" rx="2.78" ry="2.78" style="fill: #1c1c1c"/>
+    <path d="M100,21.27l5.88,10.18a.63.63,0,0,1-.55.94H94.67a.63.63,0,0,1-.55-.94Z" transform="translate(0.5 0.5)" style="fill: #fff"/>
+    <line x1="88.73" y1="21.77" x2="112.27" y2="21.77" style="fill: none;stroke: #fff;stroke-linecap: round;stroke-linejoin: round"/>
+  </g>
+  <g id="innerW">
+    <path d="M80.14,100a19.79,19.79,0,0,0,2.54,9.71,1.21,1.21,0,0,1-.21,1.48L58.79,134.42a1.37,1.37,0,0,1-.95.39,1.31,1.31,0,0,1-.52-.11,1.34,1.34,0,0,1-.83-1.25V66.55a1.34,1.34,0,0,1,.83-1.25,1.31,1.31,0,0,1,.52-.11,1.37,1.37,0,0,1,.95.39L82.47,88.81a1.23,1.23,0,0,1,.21,1.48A19.79,19.79,0,0,0,80.14,100Z" transform="translate(0.5 0.5)" style="fill: #1c1c1c"/>
+    <path d="M68,100.6,71.68,107a.23.23,0,0,1,0,.25.25.25,0,0,1-.22.13H64.58a.25.25,0,0,1-.22-.13.23.23,0,0,1,0-.25Z" transform="translate(0.5 0.5)" style="fill: #fff"/>
+    <path d="M68,100.6l3.66-6.35a.23.23,0,0,0,0-.25.25.25,0,0,0-.22-.13H64.58a.25.25,0,0,0-.22.13.23.23,0,0,0,0,.25Z" transform="translate(0.5 0.5)" style="fill: #fff"/>
+    <line x1="61.4" y1="101.1" x2="75.64" y2="101.1" style="fill: none;stroke: #fff;stroke-linecap: round;stroke-linejoin: round"/>
+  </g>
+  <g id="innerE">
+    <path d="M142.68,65.3a1.34,1.34,0,0,1,.83,1.25v66.9a1.34,1.34,0,0,1-.83,1.25,1.31,1.31,0,0,1-.52.11,1.37,1.37,0,0,1-.95-.39l-23.68-23.23a1.23,1.23,0,0,1-.21-1.48,19.83,19.83,0,0,0,0-19.42,1.21,1.21,0,0,1,.21-1.48l23.68-23.23a1.37,1.37,0,0,1,.95-.39A1.31,1.31,0,0,1,142.68,65.3Z" transform="translate(0.5 0.5)" style="fill: #1c1c1c"/>
+    <path d="M131.45,100.6l6.35-3.66a.23.23,0,0,1,.25,0,.25.25,0,0,1,.13.22V104a.25.25,0,0,1-.13.22.23.23,0,0,1-.25,0Z" transform="translate(0.5 0.5)" style="fill: #fff"/>
+    <path d="M131.45,100.6l-6.35-3.66a.23.23,0,0,0-.25,0,.25.25,0,0,0-.13.22V104a.25.25,0,0,0,.13.22.23.23,0,0,0,.25,0Z" transform="translate(0.5 0.5)" style="fill: #fff"/>
+    <line x1="131.95" y1="108.22" x2="131.95" y2="93.98" style="fill: none;stroke: #fff;stroke-linecap: round;stroke-linejoin: round"/>
+  </g>
+  <g id="innerN">
+    <path d="M134.42,58.79,111.19,82.47a1.23,1.23,0,0,1-1.48.21,19.83,19.83,0,0,0-19.42,0,1.21,1.21,0,0,1-1.48-.21L65.58,58.79a1.36,1.36,0,0,1-.28-1.47,1.34,1.34,0,0,1,1.25-.83h66.9a1.34,1.34,0,0,1,1.25.83A1.36,1.36,0,0,1,134.42,58.79Z" transform="translate(0.5 0.5)" style="fill: #1c1c1c"/>
+    <line x1="94.23" y1="62.5" x2="106.77" y2="62.5" style="fill: none;stroke: #fff;stroke-linecap: round;stroke-linejoin: round"/>
+    <line x1="94.23" y1="68.27" x2="106.77" y2="68.27" style="fill: none;stroke: #fff;stroke-linecap: round;stroke-linejoin: round"/>
+    <line x1="94.23" y1="74.04" x2="106.77" y2="74.04" style="fill: none;stroke: #fff;stroke-linecap: round;stroke-linejoin: round"/>
+  </g>
+  <g id="innerS">
+    <path d="M134.42,141.21a1.36,1.36,0,0,1,.28,1.47,1.34,1.34,0,0,1-1.25.83H66.55a1.34,1.34,0,0,1-1.25-.83,1.36,1.36,0,0,1,.28-1.47l23.23-23.68a1.23,1.23,0,0,1,1.48-.21,19.83,19.83,0,0,0,19.42,0,1.21,1.21,0,0,1,1.48.21Z" transform="translate(0.5 0.5)" style="fill: #1c1c1c"/>
+    <path d="M134.42,141.21l-23.91-24.37a19.8,19.8,0,0,1-21,0L65.58,141.21a1.36,1.36,0,0,0-.28,1.47,1.34,1.34,0,0,0,1.25.83h66.9a1.34,1.34,0,0,0,1.25-.83A1.36,1.36,0,0,0,134.42,141.21Zm0,0-23.91-24.37a19.8,19.8,0,0,1-21,0L65.58,141.21a1.36,1.36,0,0,0-.28,1.47,1.34,1.34,0,0,0,1.25.83h66.9a1.34,1.34,0,0,0,1.25-.83A1.36,1.36,0,0,0,134.42,141.21Z" transform="translate(0.5 0.5)" style="fill: #1c1c1c"/>
+    <line x1="94.73" y1="137.84" x2="94.73" y2="125.29" style="fill: none;stroke: #fff;stroke-linecap: round;stroke-linejoin: round"/>
+    <line x1="100.5" y1="137.84" x2="100.5" y2="125.29" style="fill: none;stroke: #fff;stroke-linecap: round;stroke-linejoin: round"/>
+    <line x1="106.27" y1="137.84" x2="106.27" y2="125.29" style="fill: none;stroke: #fff;stroke-linecap: round;stroke-linejoin: round"/>
+  </g>
+  <g id="center">
+    <path d="M100,85.14A14.86,14.86,0,1,1,85.14,100,14.86,14.86,0,0,1,100,85.14" transform="translate(0.5 0.5)" style="fill: #1c1c1c"/>
+    <circle cx="100.5" cy="100.5" r="5.32" style="fill: #fff"/>
+    <line x1="89.8" y1="100.5" x2="111.2" y2="100.5" style="fill: none;stroke: #fff;stroke-linecap: round;stroke-linejoin: round"/>
+    <line x1="100.5" y1="111.2" x2="100.5" y2="89.8" style="fill: none;stroke: #fff;stroke-linecap: round;stroke-linejoin: round"/>
+  </g>
+  <rect id="frame" x="0.5" y="0.5" width="200" height="200" style="fill: none;stroke: #1c1c1c;stroke-miterlimit: 10"/>
+</svg>

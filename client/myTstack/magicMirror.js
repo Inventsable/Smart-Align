@@ -98,6 +98,7 @@ function reColorUI(){
   }
 }
 
+
 function buildUI(){
   var btnToggles = ['switch', 'switch-on', 'switch-off'];
   for (var i = 0; i < btnToggles.length; i++) {
