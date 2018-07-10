@@ -2,6 +2,10 @@
   --quart: cubic-bezier(0.76, 0.00, 0.24, 1.00);
 }
 
+/* #TopToolbar {
+  display: none;
+} */
+
 #content {
   margin: 1rem 0px;
 }
@@ -12,11 +16,13 @@ svg {
 
 .icoFill {
   fill: var(--colorIcon);
+  cursor: pointer;
 }
 
 .bound {
   fill: rgba(0,0,0,0.2);
   transition: fill 100ms var(--quart) 20ms;
+  cursor: pointer;
 }
 
 /* g:hover {

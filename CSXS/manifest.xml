@@ -42,7 +42,7 @@
             <Size>
               <!-- 7) -->
               <Height>100</Height>
-              <Width>104</Width>
+              <Width>150</Width>
             </Size>
             <MaxSize>
               <Height>200</Height>
@@ -50,7 +50,7 @@
             </MaxSize>
             <MinSize>
               <Height>200</Height>
-              <Width>104</Width>
+              <Width>150</Width>
             </MinSize>
           </Geometry>
           <Icons />

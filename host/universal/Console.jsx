@@ -1,14 +1,3 @@
-function selectScanner() {
-  if (app.selection.length > 1) {
-    return app.selection.length;
-  } else if (app.selection.length >= 1) {
-    return 1;
-  } else {
-    return 0;
-  }
-}
-
-
 function sendMsg(){
   alert("Hello?")
 }

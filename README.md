@@ -1,9 +1,23 @@
 ## Smart Align
 
-Collaboration with @nimbling
+Collaboration with @nimbling for a dynamic alignment panel:
 
-![UI](https://thumbs.gfycat.com/FineBelovedIguana-size_restricted.gif)
+![Smart Align panel](https://thumbs.gfycat.com/HatefulSimplisticHawk-size_restricted.gif)
 
-Original alignment through actions:
+When only one object (or group) is selected, align to the artboard:
 
-![UI](https://thumbs.gfycat.com/PlasticGleefulArmadillo-size_restricted.gif)
+![Solo](https://thumbs.gfycat.com/DearAfraidFulmar-size_restricted.gif)
+
+With multiple objects selected, align to selection:
+
+![Solo](https://thumbs.gfycat.com/PiercingBogusHare-size_restricted.gif)
+
+Holding the Shift key will override align to artboard:
+
+![Solo](https://thumbs.gfycat.com/SpectacularDigitalHapuka-size_restricted.gif)
+
+To-do:
+
+* Align to Key object
+
+* Clipping masks
