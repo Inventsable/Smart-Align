@@ -1,5 +1,12 @@
 :root {
   --quart: cubic-bezier(0.76, 0.00, 0.24, 1.00);
+  --colorBBox: #086baf;
+  --colorSAFocus: #086baf;
+  --icoDefOpacity: 1;
+  --icoScrunchOpacity: 0;
+  --frameNodes: 0;
+  --frameDash: 0;
+  --frameSolid: 0;
 }
 
 /* #TopToolbar {
@@ -14,8 +21,17 @@ svg {
   width: 100%;
 }
 
+.icoDef {
+  opacity: var(--icoDefOpacity);
+}
+
+.icoScrunch {
+  opacity: var(--icoScrunchOpacity);
+}
+
 .icoFill {
   fill: var(--colorIcon);
+  transition: opacity 100ms var(--quart) 0ms;
   cursor: pointer;
 }
 
@@ -25,10 +41,6 @@ svg {
   cursor: pointer;
 }
 
-/* g:hover {
-  -webkit-filter: drop-shadow( -5px -5px 5px #000 );
-        filter: drop-shadow( -5px -5px 5px #000 );
-} */
 
 g:hover > .bound {
   fill: var(--colorBorder);
@@ -44,13 +56,13 @@ g:active > .icoStr {
 }
 
 g:active > .bound {
-  fill: var(--colorSelect);
+  fill: var(--colorSAFocus);
 }
 
 .frameDashLine {
-  /* opacity: 0; */
+   /* opacity: var(--BBoxDashes); */
    fill: none;
-   stroke: var(--colorFocus);
+   stroke: var(--colorBBox);
    stroke-miterlimit: 10;
    stroke-dasharray: 7.664572715759277,7.664572715759277;
    transition: stroke 100ms var(--quart) 20ms;
@@ -65,7 +77,7 @@ g:active > .bound {
 
 .frameNode {
    fill: #fff;
-   stroke: var(--colorFocus);
+   stroke: var(--colorBBox);
    stroke-miterlimit: 10;
    transition: stroke 100ms var(--quart) 20ms,
                  fill 100ms var(--quart) 20ms;
@@ -73,22 +85,22 @@ g:active > .bound {
 
 
 #frameNodes {
-  opacity: 0;
+  opacity: var(--frameNodes);
   transition: opacity 180ms var(--quart) 20ms;
 }
 
 #frameSolid {
-  opacity: 0;
+  opacity: var(--frameSolid);
   transition: opacity 180ms var(--quart) 20ms;
 }
 
 #frameDash {
-  opacity: 0;
+  opacity: var(--frameDash);
   transition: opacity 180ms var(--quart) 20ms;
 }
 
 #frameS {
-  stroke: var(--colorFocus);
+  stroke: var(--colorBBox);
   fill: none;
 }
 

@@ -165,13 +165,13 @@ function alignSingleToArtboard(alignCompass, x1, y1, x2, y2) {
       else
         target.position = [maxX - wd, maxY + ht];
       break;
-    case 'verticalCenter':
+    case 'alignY':
       if (inverted)
         target.position = [bounds[0], (midY - ht) * -1];
       else
         target.position = [bounds[0], maxY - ht];
       break;
-    case 'horizontalCenter':
+    case 'alignX':
       if (inverted)
         target.position = [midX - wd / 2, bounds[1]];
       else

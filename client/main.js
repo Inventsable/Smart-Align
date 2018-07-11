@@ -45,6 +45,7 @@ loadJSX(`smartAlign.jsx`);
 loadJSX(`${appName}.jsx`);
 console.log(appUI);
 var scanSel, scanAB, lastA;
+var isActive = false;
 scanningSelection(true);
 scanningArtboard(true);
 
@@ -94,6 +95,7 @@ function scanResults(a) {
     if (a == 1)
       alignSolo = true;
     if (a > 0) {
+      isActive = true;
       if (a > 1) {
         csInterface.evalScript(`getBounds(selection, 'geometricBounds')`, function(e){
           alignSolo = false;
@@ -111,16 +113,14 @@ function scanResults(a) {
             coords.abs[here] = parseInt(absRes[m])
           };
         })
-        frameS.style.opacity = 1;
+        setBoundingBox(true, 'solid', color.B);
       } else {
-        frameD.style.opacity = 1;
+        setBoundingBox(true, 'dash', color.G);
       }
-      frameNodes.style.opacity = 1;
     } else {
+      isActive = false;
+      setBoundingBox(false, 'solid', 'red');
       res = ["", "", "", "", "", ""];
-      frameS.style.opacity = 0;
-      frameD.style.opacity = 0;
-      frameNodes.style.opacity = 0;
     }
   lastNum = a;
   console.log(a);
@@ -132,7 +132,7 @@ SAbtn.forEach(function(v,i,a) {
   v.addEventListener("click", function(e){
     var yOff;
     if (alignSolo) {
-      yOff = (coords.artB.index < 1) ? coords.artB.y2 * -1 : coords.artB.y2;    
+      yOff = (coords.artB.index < 1) ? coords.artB.y2 * -1 : coords.artB.y2;
       csInterface.evalScript(`alignSingleToArtboard('${v.id}', ${coords.artB.x1}, ${coords.artB.y1}, ${coords.artB.x2}, ${yOff})`);
     } else {
       if (e.shiftKey) {
@@ -151,11 +151,17 @@ SAbtn.forEach(function(v,i,a) {
           case 'S':
             csInterface.evalScript(`alignSelection('align', 'artboard', 'verticalBottom', ${coords.artB.x1}, ${coords.artB.y1}, ${coords.artB.x2}, ${yOff})`);
             break;
-          case 'distHori':
+          case 'distributeX':
             csInterface.evalScript(`alignSelection('distributeEven', 'artboard', 'verticalCenter', ${coords.artB.x1}, ${coords.artB.y1}, ${coords.artB.x2}, ${yOff})`);
             break;
-          case 'distVert':
+          case 'distributeY':
             csInterface.evalScript(`alignSelection('distributeEven', 'artboard', 'horizontalCenter', ${coords.artB.x1}, ${coords.artB.y1}, ${coords.artB.x2}, ${yOff})`);
+            break;
+          case 'alignX':
+            csInterface.evalScript(`alignSelection('align', 'artboard', 'verticalCenter', ${coords.artB.x1}, ${coords.artB.y1}, ${coords.artB.x2}, ${yOff})`);
+            break;
+          case 'alignY':
+            csInterface.evalScript(`alignSelection('align', 'artboard', 'horizontalCenter', ${coords.artB.x1}, ${coords.artB.y1}, ${coords.artB.x2}, ${yOff})`);
             break;
           default:
             csInterface.evalScript(`alignSelection('align', 'artboard', '${v.id}', ${coords.artB.x1}, ${coords.artB.y1}, ${coords.artB.x2}, ${yOff})`);
@@ -182,11 +188,17 @@ SAbtn.forEach(function(v,i,a) {
           case 'S':
             csInterface.evalScript(`alignSelection('align', 'selection', 'verticalBottom', ${coords.abs.x1}, ${coords.abs.y1}, ${coords.abs.x2}, ${yOff})`);
             break;
-          case 'distHori':
+          case 'distributeX':
             csInterface.evalScript(`alignSelection('distributeEven', 'selection', 'horizontalCenter', ${coords.abs.x1}, ${coords.abs.y1}, ${coords.abs.x2}, ${yOff})`);
             break;
-          case 'distVert':
+          case 'distributeY':
             csInterface.evalScript(`alignSelection('distributeEven', 'selection', 'verticalCenter', ${coords.abs.x1}, ${coords.abs.y1}, ${coords.abs.x2}, ${yOff})`);
+            break;
+          case 'alignX':
+            csInterface.evalScript(`alignSelection('align', 'selection', 'verticalCenter', ${coords.abs.x1}, ${coords.abs.y1}, ${coords.abs.x2}, ${yOff})`);
+            break;
+          case 'alignY':
+            csInterface.evalScript(`alignSelection('align', 'selection', 'horizontalCenter', ${coords.abs.x1}, ${coords.abs.y1}, ${coords.abs.x2}, ${yOff})`);
             break;
           default:
             csInterface.evalScript(`alignSelection('align', 'selection', '${v.id}', ${coords.abs.x1}, ${coords.abs.y1}, ${coords.abs.x2}, ${yOff})`);
@@ -194,5 +206,80 @@ SAbtn.forEach(function(v,i,a) {
         }
       }
     }
+  }, false);
+
+  v.addEventListener("mouseover", function(e){
+    if (e.altKey) {
+      setUILayout("scrunch");
+    } else if (e.shiftKey) {
+      if (isActive)
+        setBoundingBox(true, 'dash', color.G);
+    } else {
+      if (isActive) {
+        if (alignSolo)
+          setBoundingBox(true, 'dash', color.G);
+        else
+          setBoundingBox(true, 'solid', color.B);
+      }
+      setUILayout("default");
+    }
   }, false)
+
+  v.addEventListener("mouseout", function(e){
+    if (e.shiftKey) {
+      if (isActive)
+        setBoundingBox(true, 'dash', color.G);
+    } else {
+      if (isActive) {
+        if (alignSolo)
+          setBoundingBox(true, 'dash', color.G);
+        else
+          setBoundingBox(true, 'solid', color.B);
+      } else {
+        setBoundingBox(false, 'dash', color.G);
+      }
+    }
+    if (e.altKey) {
+      setUILayout("scrunch");
+    } else {
+      setUILayout("default");
+    }
+  }, false)
+
 })
+
+
+function setBoundingBox(on, type, color) {
+  if (on) {
+    setUILayout(type);
+    document.documentElement.style.setProperty('--colorBBox', color);
+    if (type == 'solid') {
+      document.documentElement.style.setProperty('--frameSolid', 1);
+      document.documentElement.style.setProperty('--frameDash', 0);
+    } else {
+      document.documentElement.style.setProperty('--frameSolid', 0)
+      document.documentElement.style.setProperty('--frameDash', 1);
+    }
+    document.documentElement.style.setProperty('--frameNodes', 1);
+  } else {
+    document.documentElement.style.setProperty('--frameSolid', 0);
+    document.documentElement.style.setProperty('--frameDash', 0);
+    document.documentElement.style.setProperty('--frameNodes', 0);
+  }
+}
+
+var color = {
+  R: '#9e2c26',
+  G: '#319608',
+  B: '#086baf',
+};
+
+function setUILayout(which){
+  if (which == 'default') {
+    document.documentElement.style.setProperty('--icoScrunchOpacity', 0);
+    document.documentElement.style.setProperty('--icoDefOpacity', 1);
+  } else if (which == 'scrunch') {
+    document.documentElement.style.setProperty('--icoDefOpacity', 0);
+    document.documentElement.style.setProperty('--icoScrunchOpacity', 1);
+  }
+}
