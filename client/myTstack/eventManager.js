@@ -26,6 +26,9 @@
     console.log(" triggered ");
   }
 
+  csInterface.addEventListener('mighty.rollcall', function(evt) {
+    dispatchEvent('mighty.rollanswer', extFolder())
+  });
 
   //  btn.addEventListener("click", function(evt){
   // 	dispatchEvent(name, data)

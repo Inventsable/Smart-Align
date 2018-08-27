@@ -1,3 +1,5 @@
+dispatchEvent('mighty.start', extFolder())
+
 var frameS = document.getElementById('frameSolid');
 var frameD = document.getElementById('frameDash')
 var frameNodes = document.getElementById('frameNodes');
