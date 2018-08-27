@@ -8,10 +8,7 @@
   <ExecutionEnvironment>
     <HostList>
       <!-- 3) -->
-      <Host Name="AEFT" Version="15" />
       <Host Name="ILST" Version="18" />
-      <Host Name="PHSP" Version="19" />
-      <Host Name="PHXS" Version="19" />
     </HostList>
     <LocaleList>
       <Locale Code="All" />
@@ -41,7 +38,7 @@
           <Geometry>
             <Size>
               <!-- 7) -->
-              <Height>100</Height>
+              <Height>160</Height>
               <Width>150</Width>
             </Size>
             <MaxSize>
@@ -49,11 +46,14 @@
               <Width>150</Width>
             </MaxSize>
             <MinSize>
-              <Height>200</Height>
-              <Width>150</Width>
+              <Height>160</Height>
+              <Width>62</Width>
             </MinSize>
           </Geometry>
-          <Icons />
+          <Icons>
+             <Icon Type="Normal">./icons/iconLight.png</Icon>
+             <Icon Type="RollOver">./icons/iconLightRollover.png</Icon>
+          </Icons>
         </UI>
       </DispatchInfo>
     </Extension>

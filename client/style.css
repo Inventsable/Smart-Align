@@ -9,9 +9,22 @@
   --frameSolid: 0;
 }
 
-/* #TopToolbar {
+#TopToolbar {
   display: none;
-} */
+}
+
+@media only screen and (max-width: 110px) {
+  body {
+    margin: 0px 0px;
+  }
+
+  #TopToolbar {
+    display: flex;
+  }
+  #padComponents {
+    display: none;
+  }
+}
 
 #content {
   margin: 1rem 0px;

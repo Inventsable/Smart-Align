@@ -10,7 +10,7 @@ function init(){
   loadBorderWidth();
   callDoc();
   cs.addEventListener(CSInterface.THEME_COLOR_CHANGED_EVENT, onAppThemeColorChanged);
-  cs.addEventListener('documentAfterActivate', callDoc);
+  // cs.addEventListener('documentAfterActivate', reset);
   cs.addEventListener('applicationActive', callDoc);
   appUI.data.name = cs.hostEnvironment.appName;
   if (navigator.platform.indexOf('Win') > -1) {
@@ -22,6 +22,11 @@ function init(){
   buildUI();
 }
 
+function reset(){
+  // console.log("reload!");
+  location.reload();
+}
+
 function callDoc() {
   if (cs.hostEnvironment.appName === 'ILST') {
     cs.evalScript('app.documents[0].name', function(e){
@@ -31,13 +36,12 @@ function callDoc() {
       })
     })
   }
-  console.log(appUI.data);
+  // console.log(appUI.data);
 }
 
 function updateThemeWithAppSkinInfo() {
     reColorUI();
   }
-
 
 const appUI = {
   global : {
